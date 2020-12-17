@@ -21,6 +21,7 @@ def gradient(x, y) -> None:
     for i in range(iteration):
         y_predicted = current_m * x + current_b
         current_cost = 1 / n * sum([val ** 2 for val in (y - y_predicted)])
+
         dm = -2 / n * sum(x * (y - y_predicted))
         db = -2 / n * sum((y - y_predicted))
         current_m -= learning_rate * dm
